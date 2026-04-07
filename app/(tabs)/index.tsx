@@ -75,21 +75,27 @@ export default function HomeScreen() {
         onChangeText={setFenceLength}
       ></TextInput>
 
-      <Text style={styles.inputTitle}>{calculateCut()}</Text>
+      <Text style={styles.resultText}>{calculateCut()}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 100,
+    flex: 1,
+    paddingTop: 60,
+    backgroundColor: "#e0e0e0",
   },
   title: {
     fontSize: 30,
+    fontFamily: "System",
+    textDecorationLine: "underline",
     fontWeight: "bold",
     textAlign: "center",
+    paddingBottom: 10,
   },
   inputTitle: {
+    fontFamily: "System",
     marginTop: 20,
     fontSize: 18,
     textAlign: "center",
@@ -102,5 +108,11 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     width: 100,
     alignSelf: "center",
+  },
+  resultText: {
+    fontSize: 20,
+    fontFamily: "System",
+    marginTop: 30,
+    textAlign: "center",
   },
 });
